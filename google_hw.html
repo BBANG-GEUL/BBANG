@@ -1,0 +1,238 @@
+<html>
+	<head>
+		<meta charset="utf-8">	
+
+		<!-- Latest compiled and minified CSS -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+		<!-- Optional theme -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+
+		<!-- Latest compiled and minified JavaScript -->
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+
+		<!--jquery core 가 너무 많아서 뭘 붙여야하느지를 모르겠어요 ㅠ
+		https://code.jquery.com/jquery/ -->
+
+		<!--google
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js">-->
+
+	<style>
+	/* top container setting */
+		.container{
+			background:white;
+			margin:0 auto;
+			width:960px;
+			min-width:960px;
+		}
+	/* top right */
+		.container .top_rgt{
+			float:right;
+			display:inline-block;
+
+		}
+
+	/* google logo image */
+		.container .main .logo{
+			display:block;
+			padding-top:112px;
+			text-align: -webkit-center;
+		    /*height: 330px;*/
+
+		}
+
+		.container .main .logo .log-sub{
+			color: #4285f4;
+		    font-size: 16px;
+		    left: 79px;
+		    position: relative;
+		    top: -20px;
+		    white-space: nowrap;
+		    width: 0;
+		}
+
+	/* form searching & url & voice */
+		.container .main #f {
+		    display: block;
+		    text-align: -webkit-center;
+		    margin-top: 0em;
+		}
+		.container .main #fkbx{
+		    background-color: #fff;
+		    border: 1px solid rgb(185,185,185);
+		    border-radius: 1px;
+		    border-top-color: rgb(160,160,160);
+		    cursor: text;
+		    display: inline-block;
+		    font: 18px arial,sans-serif;
+		    height: 36px;
+		    line-height: 36px;
+		    max-width: 672px;
+		    position: relative;
+		    width:100%;
+		}
+
+		@media only screen and (min-width: 872px){
+			.container .main #fkbx {width: 670px;}
+		}
+
+		.container .main #fkbx #fkbx-text{
+			color: #bbb;
+		    bottom: 0;
+		    font-size: 16px;
+		    left: 9px;
+		    margin-top: 1px;
+		    overflow: hidden;
+		    position: absolute;
+		    right: 9px;
+		    text-align: initial;
+		    text-overflow: ellipsis;
+		    top: 0;
+		    white-space: nowrap;
+}
+		input{
+		    -webkit-appearance: textfield;
+			-webkit-rtl-ordering: logical;
+		    -webkit-user-select: text;
+		    cursor: auto;
+		    text-rendering: auto;
+		    color: initial;
+		    letter-spacing: normal;
+		    word-spacing: normal;
+		    text-transform: none;
+		    text-indent: 0px;
+		    text-shadow: none;
+		    display: inline-block;
+		    text-align: start;
+		    font: 12px Arial;
+		    -webkit-writing-mode: horizontal-tb;
+				   
+		}
+		.container .main #fkbx #fkbx-crt{
+			background: #333;
+		    bottom: 5px;
+		    position: absolute;
+		    left: 9px;
+		    right: auto;
+		    top: 5px;
+		    visibility: hidden;
+		    width: 1px;
+		}
+		.container .main #fkbx #fkbx-spch{
+		    cursor: pointer;
+			height: 21px;
+			padding: 0px 6px 0;
+		 	width: 17px;
+			background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAACrElEQVR42u2Xz2sTQRSAX8VSb1K8iNqKooJH2Ux6Ksn+iPQqxZMIehJB0do/IMhmQWsvHr2KSEGk0tSLIoWIYNUKij20F2/N7iaUZnYT0kYzzhMKs0HDJiTdLcwHDwKZSd63781LBiQSSW9JZdkhzfKm1Rz9mjZp/W9YdEU3vXv4HsQZ40FtNG36q5rls//Ej4tmbSS2T15Mvp3ExOPmEMQNbBtMMEyoljcFcQN7PqyAlqNfIG7gYQ0tYNIaxA1MrJPY3wImbUqBKAXSFv0tBSIVMOkvKRDtGKWN/T6FdqRAxFNoWwpEPIXqUqBT6ALU/UVgu8GW4GD3f6f9TRDYNJTDrk7YbtiqUumHwIYoUJuHERDAS0r4CvgFECgbY+cFAR7KT+g1POmCKFDNw6WggHc3fBtVb4CAoyauBgXIG+g1Xh5mRAGah6cggBd11fK/h7lOprIs0H6uRl6KAo5O7kOv4QmPiwJ4Jqqv4FiwCtXjvD2+tRmfK6kZ/ygI2HritK0rDVGgrClJ6DWMwYC/AGuCBMYcIC2V0CzvjmbRz3j3xUjn6CfeYreUJ2wQkGD75INPX1mFfsEFrrcIYCvdhC4paWQakxajpJMr0C9YFg54i7AsClRmh9/xnr0NHcInzZStk2aLwAcGMAD9pPIazvFKVDD5rdnhJeHLX5RTyRPQHpz5o66emMc9wdlPtvA8wF7Aq2BUHh1525qEo5JtR1WeOXpickO9cJIpyuD6xJmhYiZ5ytWSl3mlnuOaf+2zDaLDXmJrSgZ/MYVEugo+gSh+FkSBa4yd5Ul87DZ5XpFl/AyIEjzYjkau8WqshU2cr13HPbgX4gJOD97n465GZlyVvC9mSKloKI2iTnbwNT+gBX54H+IaXAtxJzE3ycSAFqSAFJACUkAikXD+AHj5/wx2o5osAAAAAElFTkSuQmCC) no-repeat center;
+			background-size: 24px 24px;
+			position: absolute;
+			right: 0;
+		}
+
+
+
+		.container .botfav .col-md-3{	
+					    
+		}
+
+		.container .botfav{	
+		
+		}
+
+	</style>	
+	</head>
+
+	<body>
+		<!-- 1. 레이아웃 ( 우측상단 설정, 로고, 검색, 최근이용사이트-->
+		<!-- 2. 반응형 고려-->
+
+		<div class="container">
+			<!--top right-->
+			<section>
+				<div class="top_rgt">
+
+				<a class="tr1" data-pid="23" href="https://mail.google.com/mail/" data-ved="0EMIuCAEoAA">Gmail</a>
+				<a class="tr2" data-pid="2" href="https://www.google.co.nz/imghp?hl=ko&amp;ei=YK-GV9CaOoH20gSOirtQ&amp;ved=0EKouCAIoAQ">이미지</a>
+
+				<div class="dropdown">
+				  <button class="glyphicon glyphicon-th" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+				    <span class="caret"></span>
+				  </button>
+				  <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+				    <li><a href="#">Action</a></li>
+				    <li><a href="#">Another action</a></li>
+				    <li><a href="#">Something else here</a></li>
+				    <li role="separator" class="divider"></li>
+				    <li><a href="#">Separated link</a></li>
+				  </ul>
+				</div>
+
+
+
+				<a class="tr3" href="https://www.google.co.nz/intl/ko/options/" title="Google 앱" aria-expanded="false" tabindex="0" data-ved="0EL0nCAM"></a>
+
+				<div>
+					<a class="tr4" aria-haspopup="true" tabindex="0" aria-expanded="false" aria-label="Google 알림 0개" title="Google 알림 0개"><div></div></a>
+				</div>
+
+				<a class="tr5" href="https://accounts.google.com/SignOutOptions?hl=ko&amp;continue=https://www.google.co.nz/_/chrome/newtab%3Fei%3DFOuGV9KTHIbQ0gSkoKdg%26espv%3D2%26yv%3D2" title="Google 계정: 최방글  
+(banggeul84@gmail.com)" tabindex="0" aria-expanded="false"><span class="tr5_b"></span></a>
+
+				</div>
+			</section>
+
+			<!--main-->
+			<section>
+			<div class="main">
+				<div class="logo">  
+					<img src="https://www.google.co.nz/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png" alt="Google" width="272px" height="92px" pad>		
+				<div class="log-sub">New Zealand</div>	
+				</div>	
+			
+			 	<form action="/search" id="f" method="get">
+			 		<div id="fkbx">
+			 			<div id="fkbx-text">Google 검색 또는 URL 입력</div>
+			 			<input id="q" aria-hidden="true" autocomplete="off" name="q" tabindex="-1" type="url" jsaction="mousedown:ntp.fkbxclk" style="opacity:0;">
+			 			<div id="fkbx_crt"></div>
+			 			<div id="fkbx-spch" tabindex="0" aria-label="음성 검색" style="display: block;"></div>
+			 		</div>
+				</form>
+ 			</div>
+			</section>
+			
+			<!--favorite-->
+			<section>
+				<div class="botfav">	
+					
+					   <div class = "col-md-3">
+					      <a href = "http://www.naver.com" class = "thumbnail">
+					         <div id="fav-txt">NAVER</div>
+					         <img src = "C:\Users\banggeul\Desktop\HW\img\naver.jpg" alt = "NAVER">
+					      </a>
+					   </div>
+   					   
+					   <div class = "col-md-3">
+					      <a href = "http://www.gmarket.co.kr" class = "thumbnail">
+					         <div id="fav-txt">Gmarket</div>
+					         <img src = "C:\Users\banggeul\Desktop\HW\img\gmarket.jpg" alt = "Gmarket">
+					      </a>
+					   </div>
+					   
+					   <div class = "col-md-3">
+					      <a href = "http://www.w3schools.com/" class = "thumbnail">
+					      	 <div id="fav-txt">W3School</div>
+					         <img src = "C:\Users\banggeul\Desktop\HW\img\w3school.jpg" alt = "W3School">
+					      </a>
+					   </div>
+				       <div class = "col-md-3">
+					      <a href = "http://gridus-html.neuethemes.net/108/home.html" class = "thumbnail">
+					         <div id="fav-txt">Samuel</div>
+					         <img src = "C:\Users\banggeul\Desktop\HW\img\samuel.jpg" alt = "Samuel">
+					      </a>
+					   </div>   
+					</div>
+				</div>
+			</section>
+		</div>
+	</body>
+</html>
