@@ -1,6 +1,7 @@
 <html>
 	<head>
 		<meta charset="utf-8">	
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 
 		<!-- Latest compiled and minified CSS -->
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
@@ -10,9 +11,6 @@
 
 		<!-- Latest compiled and minified JavaScript -->
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
-
-		<!--jquery core 가 너무 많아서 뭘 붙여야하느지를 모르겠어요 ㅠ
-		https://code.jquery.com/jquery/ -->
 
 		<!--google
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js">-->
@@ -26,11 +24,124 @@
 			min-width:960px;
 		}
 	/* top right */
-		.container .top_rgt{
-			float:right;
-			display:inline-block;
 
+		.container .top_rgt{
+			display:inline-flex;
+			float:right;
 		}
+		
+		.container .top_rgt .tr_lft{
+			padding-top:15px;
+		}
+
+		.container .top_rgt .tr_rgt{
+			padding-top:15px;
+		}
+
+		.container .top_rgt .tr_rgt_sub{
+			padding-top:15px;
+		}
+
+		.container .top_rgt .tr_lft .tr{
+			display: inline-block;
+		    line-height: 24px;
+		    outline: none;
+		    vertical-align: middle;
+		    opacity: .85;
+    		/*text-decoration: underline;*/
+    		color: #000;
+    		padding-right:15px;
+    		cursor:auto;
+		}
+
+
+		.container .top_rgt .tr_rgt{
+			display: inline-block;
+		    line-height: 24px;
+		    outline: none;
+		    vertical-align: middle;
+		    opacity: .85;
+    		/*text-decoration: underline;*/
+    		color: #000;
+    		padding-right:15px;
+    		cursor:auto;
+		}
+
+		.container .top_rgt .tr_rgt_sub .tr{
+			display: inline-block;
+		    line-height: 24px;
+		    outline: none;
+		    vertical-align: middle;
+		    opacity: .85;
+    		/*text-decoration: underline;*/
+    		color: #000;
+    		padding-right:15px;
+    		cursor:auto;
+		}
+
+		/*dropdown menu*/
+		.container .top_rgt .tr_rgt .dropdown .top_app {
+		    background: #fff;
+		    border: 1px solid #ccc;
+		    border-color: rgba(0,0,0,.2);
+		    color: #000;
+		    /* -webkit-box-shadow: 0 2px 10px rgba(0,0,0,.2); */
+		    box-shadow: 0 2px 10px rgba(0,0,0,.2);
+		    /* display: none; */
+		    outline: none;
+		    overflow: hidden;
+		    position: absolute;
+		    right: 0;
+		    top: 44px;
+		    /* -webkit-animation: gb__a .2s; */
+		    animation: gb__a .2s;
+		    /* -webkit-border-radius: 2px; */
+		    border-radius: 2px;
+		    -webkit-user-select: text;
+		}
+
+		.container .top_rgt .tr_rgt .dropdown .top_app .app{
+		    min-height: 196px;
+		    overflow-y: auto;
+		    width: 320px;
+		}
+
+		/*기능 확인 필요 ???*/
+		/*.container .top_rgt .tr_rgt .dropdown .top_app .gb_fb{
+		    border-color: transparent;
+		    border-style: dashed dashed solid;
+		    border-width: 0 8.5px 8.5px;
+		    display: none;
+		    position: absolute;
+		    left: 6.5px;
+		    z-index: 1;
+		    height: 0;
+		    width: 0;		
+		    animation: gb__a .2s;
+		    top: 36px;
+		} */
+
+
+		.container .top_rgt .tr_rgt .dropdown .top_app .app .gb_ja{
+		    background: #fff;
+		    margin: 0;
+		    min-height: 100px;
+		    padding: 28px;
+		    padding-right: 27px;
+		    text-align: left;
+		    white-space: normal;
+		    width: 265px;
+		    position: relative;
+		    display:block;
+		}
+
+		/*dropdown font*/
+		.container .top_rgt .tr_rgt .dropdown .top_app .app .gb_O{
+		    color: #404040;
+    		text-decoration: none;
+    		position: absolute;
+		}
+
 
 	/* google logo image */
 		.container .main .logo{
@@ -92,7 +203,7 @@
 }
 		input{
 		    -webkit-appearance: textfield;
-			-webkit-rtl-ordering: logical;
+			/*-webkit-rtl-ordering: logical;*/
 		    -webkit-user-select: text;
 		    cursor: auto;
 		    text-rendering: auto;
@@ -151,34 +262,199 @@
 			<section>
 				<div class="top_rgt">
 
-				<a class="tr1" data-pid="23" href="https://mail.google.com/mail/" data-ved="0EMIuCAEoAA">Gmail</a>
-				<a class="tr2" data-pid="2" href="https://www.google.co.nz/imghp?hl=ko&amp;ei=YK-GV9CaOoH20gSOirtQ&amp;ved=0EKouCAIoAQ">이미지</a>
+				<div class="tr_lft">
+					<a class="tr" data-pid="23" href="https://mail.google.com/mail/">Gmail</a>
+					<a class="tr" data-pid="2" href="https://www.google.co.nz/imghp?hl=ko&amp;ei=YK-GV9CaOoH20gSOirtQ&amp;ved=0EKouCAIoAQ">이미지</a>
+				</div>
+				<div class="tr_rgt">
+					<div class="dropdown">
+						<button class="glyphicon glyphicon-th" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true"></button>
+						<!--<span class="caret"></span>  역삼각형 단추 제거--> 						
+						  <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+						    <!--<li><a href="#">Action</a></li>
+						    <li><a href="#">Another action</a></li>
+						    <li><a href="#">Something else here</a></li>
+						    <li role="separator" class="divider"></li>
+						    <li><a href="#">Separated link</a></li>
+						  </ul>
+						</div>-->
 
-				<div class="dropdown">
-				  <button class="glyphicon glyphicon-th" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-				    <span class="caret"></span>
-				  </button>
-				  <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-				    <li><a href="#">Action</a></li>
-				    <li><a href="#">Another action</a></li>
-				    <li><a href="#">Something else here</a></li>
-				    <li role="separator" class="divider"></li>
-				    <li><a href="#">Separated link</a></li>
-				  </ul>
+					<div class="top_app">
+						<a class="gb_b gb_Rb" href="https://www.google.co.nz/intl/ko/options/" title="Google 앱" aria-expanded="true" tabindex="0" data-ved="0EL0nCAM"></a>
+						<div class="gb_fb"></div>					
+						<div class="app" aria-label="Google 앱" aria-hidden="false" role="region" style="max-height: 102px; height: 496px;">
+						<ul class="gb_ja" aria-dropeffect="move">
+							<li class="gb_Z" aria-grabbed="false" id="ogbkddg:0">
+								<a class="gb_O" data-pid="192" href="https://myaccount.google.com/?utm_source=OGB" id="gb192" data-ved="0EMEuCAQoAg">
+								<div class="gb_8"></div>
+								<div class="gb_9"></div>
+								<div class="gb_aa"></div>
+								<div class="gb_ba"></div>
+								<span class="gb_3" style="background-position:0 -1451px"></span>
+								<span class="gb_4">내 계정</span></a></li>
+
+							<li class="gb_Z" aria-grabbed="false" id="ogbkddg:1">
+								<a class="gb_O" data-pid="1" href="https://www.google.co.nz/webhp?ei=0RmKV-27Nsyj0gSWoKaICg&amp;ved=0EKkuCAUoAw" id="gb1">
+								<div class="gb_8"></div>
+								<div class="gb_9"></div>
+								<div class="gb_aa"></div>
+								<div class="gb_ba"></div>
+								<span class="gb_3" style="background-position:-17px -207px"></span>
+								<span class="gb_4">검색</span></a></li>
+
+							<li class="gb_Z" aria-grabbed="false" id="ogbkddg:2">
+								<a class="gb_O" data-pid="8" href="https://maps.google.co.nz/maps?hl=ko" id="gb8" data-ved="0EMEuCAYoBA">
+								<div class="gb_8"></div>
+								<div class="gb_9"></div>
+								<div class="gb_aa"></div>
+								<div class="gb_ba"></div>
+								<span class="gb_3" style="background-position:0 -450px"></span>
+								<span class="gb_4">지도</span></a></li>
+
+							<li class="gb_Z" aria-grabbed="false" id="ogbkddg:3">
+								<a class="gb_O" data-pid="36" href="https://www.youtube.com/?gl=NZ" id="gb36" data-ved="0EMEuCAcoBQ">
+								<div class="gb_8"></div>
+								<div class="gb_9"></div>
+								<div class="gb_aa"></div>
+								<div class="gb_ba"></div>
+								<span class="gb_3" style="background-position:0 0"></span>
+								<span class="gb_4">YouTube</span></a></li>
+
+							<li class="gb_Z" aria-grabbed="false" id="ogbkddg:4">
+								<a class="gb_O" data-pid="78" href="https://play.google.com/?hl=ko" id="gb78" data-ved="0EMEuCAgoBg">
+								<div class="gb_8"></div>
+								<div class="gb_9"></div>
+								<div class="gb_aa"></div>
+								<div class="gb_ba"></div>
+								<span class="gb_3" style="background-position:0 -1779px"></span>
+								<span class="gb_4">Play</span></a></li>
+
+							<li class="gb_Z gb_0" aria-grabbed="false" id="ogbkddg:5">
+								<a class="gb_O gb_0" data-pid="5" id="gb5" title="이 앱은 사용자의 언어로 이용할 수 없습니다.">
+								<div class="gb_8"></div>
+								<div class="gb_9"></div>
+								<div class="gb_aa"></div>
+								<div class="gb_ba"></div>
+								<span class="gb_3" style="background-position:0 -1990px"></span>
+								<span class="gb_4">뉴스</span></a></li>
+
+							<li class="gb_Z" aria-grabbed="false" id="ogbkddg:6">
+								<a class="gb_O" data-pid="23" href="https://mail.google.com/mail/" id="gb23" data-ved="0EMEuCAooCA">
+								<div class="gb_8"></div>
+								<div class="gb_9"></div>
+								<div class="gb_aa"></div>
+								<div class="gb_ba"></div>
+								<span class="gb_3" style="background-position:0 -1710px"></span>
+								<span class="gb_4">Gmail</span></a></li>
+
+							<li class="gb_Z" aria-grabbed="false" id="ogbkddg:7">
+								<a class="gb_O" data-pid="49" href="https://drive.google.com/?authuser=0" id="gb49" data-ved="0EMEuCAsoCQ">
+								<div class="gb_8"></div>
+								<div class="gb_9"></div>
+								<div class="gb_aa"></div>
+								<div class="gb_ba"></div>
+								<span class="gb_3" style="background-position:0 -138px"></span>
+								<span class="gb_4">드라이브</span></a></li>
+
+							<li class="gb_Z" aria-grabbed="false" id="ogbkddg:8">
+								<a class="gb_O" data-pid="24" href="https://www.google.com/calendar" id="gb24" data-ved="0EMEuCAwoCg">
+								<div class="gb_8"></div>
+								<div class="gb_9"></div>
+								<div class="gb_aa"></div>
+								<div class="gb_ba"></div>
+								<span class="gb_3" style="background-position:0 -2059px"></span>
+								<span class="gb_4">캘린더</span></a></li>
+
+							<li class="gb_Z" aria-grabbed="false" id="ogbkddg:9">
+								<a class="gb_O" data-pid="119" href="https://plus.google.com/u/0/" id="gb119" data-ved="0EMEuCA0oCw">
+								<div class="gb_8"></div>
+								<div class="gb_9"></div>
+								<div class="gb_aa"></div>
+								<div class="gb_ba"></div>
+								<span class="gb_3" style="background-position:0 -938px"></span>
+								<span class="gb_4">Google+</span></a></li>
+
+							<li class="gb_Z" aria-grabbed="false" id="ogbkddg:a">
+								<a class="gb_O" data-pid="51" href="https://translate.google.co.nz/?hl=ko" id="gb51" data-ved="0EMEuCA4oDA">
+								<div class="gb_8"></div>
+								<div class="gb_9"></div>
+								<div class="gb_aa"></div>
+								<div class="gb_ba"></div>
+								<span class="gb_3" style="background-position:0 -693px"></span>
+								<span class="gb_4">번역</span></a></li>
+
+							<li class="gb_Z" aria-grabbed="false" id="ogbkddg:b">
+								<a class="gb_O" data-pid="31" href="https://photos.google.com/" id="gb31" data-ved="0EMEuCA8oDQ">
+								<div class="gb_8"></div>
+								<div class="gb_9"></div>
+								<div class="gb_aa"></div>
+								<div class="gb_ba"></div>
+								<span class="gb_3" style="background-position:0 -1145px"></span>
+								<span class="gb_4">사진</span></a></li>
+						</ul>
+					    </div>
+				    </div>
+				   		 </ul>
+				    </div>
+				</div>
+
+				<!-- 선 위치 설정  알림, 계정 업데이트 해야함-->
+				<div class="tr_rgt_sub">
+					<a class="tr" data-pid="23" href="https://mail.google.com/mail/">알림임시</a>
+					<a class="tr" data-pid="2" href="https://www.google.co.nz/imghp?hl=ko&amp;ei=YK-GV9CaOoH20gSOirtQ&amp;ved=0EKouCAIoAQ">계정임시</a>
 				</div>
 
 
 
-				<a class="tr3" href="https://www.google.co.nz/intl/ko/options/" title="Google 앱" aria-expanded="false" tabindex="0" data-ved="0EL0nCAM"></a>
 
-				<div>
-					<a class="tr4" aria-haspopup="true" tabindex="0" aria-expanded="false" aria-label="Google 알림 0개" title="Google 알림 0개"><div></div></a>
-				</div>
+<!-- 로그인 계정
+<div class="aaaaa">
+	<a class="gb_b gb_8a gb_R" href="https://accounts.google.com/SignOutOptions?hl=ko&amp;continue=https://www.google.co.nz/_/chrome/newtab%3Fei%3DFOuGV9KTHIbQ0gSkoKdg%26espv%3D2%26yv%3D2" title="Google 계정: 최방글  
+	(banggeul84@gmail.com)" tabindex="0" aria-expanded="true">
+	<span class="gb_3a gbii"></span></a>
+	<div class="gb_fb"></div>
+	<div class="gb_eb"></div>
+</div>
 
-				<a class="tr5" href="https://accounts.google.com/SignOutOptions?hl=ko&amp;continue=https://www.google.co.nz/_/chrome/newtab%3Fei%3DFOuGV9KTHIbQ0gSkoKdg%26espv%3D2%26yv%3D2" title="Google 계정: 최방글  
-(banggeul84@gmail.com)" tabindex="0" aria-expanded="false"><span class="tr5_b"></span></a>
+<div class="gb_gb gb_ga gb_g" aria-label="계정 정보" aria-hidden="false" img-loaded="1">
+<div class="gb_jb">
+<a class="gb_kb gb_Ee gb_mb" aria-label="프로필 사진 변경" href="https://plus.google.com/u/0/me">
+<div class="gb_nb gbip" title="Google+ 프로필 아이콘"></div>
+<span class="gb_ob">변경</span></a>
+<div class="gb_lb">
+<div class="gb_pb">최방글</div>
+<div class="gb_qb">banggeul84@gmail.com</div>
+<div class="gb_ib">
+<a href="https://plus.google.com/u/0/me">Google+ 프로필</a>
+<a href="http://www.google.co.nz/intl/ko/policies/privacy/">개인정보 보호</a>
+</div>
+<a class="gb_Fa gb_Be gbp1 gb_rb" href="https://myaccount.google.com/?utm_source=OGB">내 계정</a></div>
+</div>
+<div class="multiLogin">
+<div class="gb_wb gb_2a" aria-hidden="true">
+<a class="gb_xb gb_Ab" href="https://www.google.co.nz/webhp?authuser=0">
+<img class="gb_Cb gb_mb" src="//lh3.googleusercontent.com/-uHYaD7RUiXY/AAAAAAAAAAI/AAAAAAAAAAA/AOkcYIsyVA203BII0WPW-7bImzXmp_u59w/w48-h48-mo/photo.jpg" alt="Google+ 프로필 아이콘">
+<div class="gb_zb">
+<div class="gb_Db">최방글</div>
+<div class="gb_Eb">banggeul84@gmail.com(기본값)</div>
+</div>
+</a>
+</div>
+<a class="gb_Fb gb_2a" href="https://plus.google.com/u/0/dashboard" aria-hidden="true">
+<span class="gb_Hb gb_Rb"></span>
+<div class="gb_Ib">내 모든 Google+ 페이지 ›</div>
+</a>
+</div>
+<div class="gb_sb">
+<div>
+<a class="gb_Fa gb_ze gb_rb" href="https://accounts.google.com/AddSession?hl=ko&amp;continue=https://www.google.co.nz/_/chrome/newtab%3Fei%3DFOuGV9KTHIbQ0gSkoKdg%26espv%3D2%26yv%3D2">계정 추가</a></div>
+<div>
+<a class="gb_Fa gb_Ce gb_Ke gb_rb" id="gb_71" href="https://accounts.google.com/Logout?hl=ko&amp;continue=https://www.google.co.nz/_/chrome/newtab%3Fei%3DFOuGV9KTHIbQ0gSkoKdg%26espv%3D2%26yv%3D2&amp;timeStmp=1468691406&amp;secTok=.AG5fkS_7LCLFuRZdukvr-QZGvrEk5nLFDQ" target="_top">로그아웃</a></div>
+</div>
+</div>-->
 
-				</div>
+					
+
 			</section>
 
 			<!--main-->
