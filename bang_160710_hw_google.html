@@ -1,0 +1,103 @@
+<html>
+	<head>
+		<meta charset="utf-8">
+
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+		<!-- Latest compiled and minified CSS -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+		<!-- Optional theme -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+
+		<!-- Latest compiled and minified JavaScript -->
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+
+		<style>
+			.container{
+				background:white;
+			}
+
+			.container .top_rgt{
+				float:right;
+				display:inline-flex;
+				position:relative;
+			}
+			.container .top_rgt .sub1{
+				position:relative;
+				padding-top:15px;
+				padding-right:15px;
+				color:#000;
+			}
+
+
+			
+			/* top logo style detail */
+			.container .top_logo .logo{
+				height:231px;
+    			margin-top:120px;
+    			text-align:-webkit-center;
+    			position:relative;
+			}
+
+			.container .top_logo .logo .nz{
+				color:#4285f4;
+			    font-size:16px;
+			    float:right;
+			    position:absolute;
+			    
+			}
+
+
+			.container .search#form{
+				width:100%;
+			    
+			}
+
+		</style>
+	</head>
+	<body>
+		<!--1. 오른쪽 상단, 로고, 서칭 -->
+		<!--2. 오른쪽 상단 : 드롭다운 방식 ==> 부트스트랩 사용 -->
+		<!--3. 로고 : 중앙 정렬 로고 이미지 소스 찾기 -->
+		<!--4. 서칭 : 폼 서식 이용 , 마이크 소스 찾기 -->
+
+	<div class="container">
+
+		<!--top right section-->
+		<section>
+		<div class="top_rgt">
+			<div class="sub1" id="gmail">
+				<a data-pid="23" href="https://mail.google.com/mail/">Gmail</a></div>
+			<div class="sub1" id="img"	>
+				<a data-pid="2" href="https://www.google.co.nz/imghp?hl=ko&amp;ei=YK-GV9CaOoH20gSOirtQ&amp;ved=0EKouCAIoAQ">이미지</a></div>
+			<div class="sub1" id="apps"	>앱상자</div>
+			<div class="sub1" id="alam"	>알림</div>
+			<div class="sub1" id="host"	>계정</div>
+		</div>			
+		</section>
+
+		<!--top logo image-->
+		<section>
+			<div class="top_logo">
+				<div class="logo">
+					<img src="https://www.google.co.nz/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png" alt="Google" width="272px" height="92px">				
+				<div class="nz"> New Zealand </div>
+				</div>
+			</div>
+		</section>
+
+		<!--top searching-->
+		<section>
+			<div class="search">
+				<div id="form">
+					<form> 
+  					<input type="text" id="fname" name="fname">
+					</form>
+				</div>
+				<div id="mic"></div>
+			</div>			
+		</section>
+	</div>	
+	</body>
+</html>

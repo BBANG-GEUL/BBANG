@@ -1,0 +1,76 @@
+<html>
+	<head>
+		<meta charset="utf-8">
+
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+		<!-- Latest compiled and minified CSS -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+		<!-- Optional theme -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+
+		<!-- Latest compiled and minified JavaScript -->
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+		
+	</head>
+	<body>
+
+		<!--1. function 두수를 입력 받아 *, /, +, -를 수행하는 펑션 만들기-->
+		<!--2. 버튼(펑션실행), 팝업(결과호출)-->
+
+		<script>
+			//function myFunc(){
+			//	myFuncAdd();
+			//	myFuncDif();
+			//	myFuncMul();
+			//	myFuncDiv();
+
+			//	console.log();
+			//}
+
+
+			// + 함수
+			function myFuncAdd(num1, num2){
+				var num1;
+				var num2;
+				var ans = num1 + num2;
+				return ans;
+			}
+			// - 함수
+			function myFuncDif(num1, num2){
+				var num1;
+				var num2;
+				var ans = num1 - num2;  //결과값이 -인경우 고려 해야하나 ?
+				return ans;
+			}
+			// * 함수
+			function myFuncMul(num1, num2){
+				var num1;
+				var num2;
+				var ans = num1 * num2;
+				return ans;
+			}
+			// / 함수
+			function myFuncDiv(num1, num2){
+				var num1;
+				var num2;
+				var ans = num1 / num2;  // 0으로 나누려고 할 경우와 num1 < num2 경우 고려 ?
+				return ans;
+			}
+
+
+			
+		</script>
+
+		<!-- 버튼 생성 // 사용자에게 두수를 입력 받으려면 ?-->
+
+		<button onclick="alert(myFuncAdd(4, 3))"> + </button>
+		<button onclick="alert(myFuncDif(4, 3))"> - </button>
+		<button onclick="alert(myFuncMul(4, 3))"> * </button>
+		<button onclick="alert(myFuncDiv(4, 3))"> / </button>
+		
+		
+
+	</body>
+</html>
