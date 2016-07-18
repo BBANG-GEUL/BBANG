@@ -32,26 +32,50 @@
 
 
 			
-			/* top logo style detail */
+			/* top logo style */
+			.container .top_logo{
+				position:relative;
+			}
+			/*Google logo image style*/
 			.container .top_logo .logo{
-				height:231px;
-    			margin-top:120px;
+				margin-top:120px;
     			text-align:-webkit-center;
     			position:relative;
-			}
-
+    		}
+    		/*new zealand text style*/
 			.container .top_logo .logo .nz{
-				color:#4285f4;
-			    font-size:16px;
-			    float:right;
-			    position:absolute;
+				color: #4285f4;
+			    font-size: 16px;
+			    left: 79px;
+			    position:relative;  /*★질문: absolute 세팅시 안되는 이유는 ?*/
+			    top: -20px;
+			    white-space: nowrap;
+			    width: 0;
 			    
 			}
 
-
-			.container .search#form{
-				width:100%;
-			    
+			/*top search style*/
+			.container .search{
+				position:relative;
+				background:gray;	   
+			}
+			/*search form style*/
+			.container .search .form-group .col-sm-6{
+				position:center;	
+				margin-left:300px;
+				position:relative;	    
+			}
+			/*search mic style*/
+			.container .search .form-group .col-sm-6 .mic{
+				/*background:yellow;*/
+				cursor: pointer;  
+			    height: 21px;
+			    padding: 15px 6px 0; 
+			    width: 17px;
+			    background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAACrElEQVR42u2Xz2sTQRSAX8VSb1K8iNqKooJH2Ux6Ksn+iPQqxZMIehJB0do/IMhmQWsvHr2KSEGk0tSLIoWIYNUKij20F2/N7iaUZnYT0kYzzhMKs0HDJiTdLcwHDwKZSd63781LBiQSSW9JZdkhzfKm1Rz9mjZp/W9YdEU3vXv4HsQZ40FtNG36q5rls//Ej4tmbSS2T15Mvp3ExOPmEMQNbBtMMEyoljcFcQN7PqyAlqNfIG7gYQ0tYNIaxA1MrJPY3wImbUqBKAXSFv0tBSIVMOkvKRDtGKWN/T6FdqRAxFNoWwpEPIXqUqBT6ALU/UVgu8GW4GD3f6f9TRDYNJTDrk7YbtiqUumHwIYoUJuHERDAS0r4CvgFECgbY+cFAR7KT+g1POmCKFDNw6WggHc3fBtVb4CAoyauBgXIG+g1Xh5mRAGah6cggBd11fK/h7lOprIs0H6uRl6KAo5O7kOv4QmPiwJ4Jqqv4FiwCtXjvD2+tRmfK6kZ/ygI2HritK0rDVGgrClJ6DWMwYC/AGuCBMYcIC2V0CzvjmbRz3j3xUjn6CfeYreUJ2wQkGD75INPX1mFfsEFrrcIYCvdhC4paWQakxajpJMr0C9YFg54i7AsClRmh9/xnr0NHcInzZStk2aLwAcGMAD9pPIazvFKVDD5rdnhJeHLX5RTyRPQHpz5o66emMc9wdlPtvA8wF7Aq2BUHh1525qEo5JtR1WeOXpickO9cJIpyuD6xJmhYiZ5ytWSl3mlnuOaf+2zDaLDXmJrSgZ/MYVEugo+gSh+FkSBa4yd5Ul87DZ5XpFl/AyIEjzYjkau8WqshU2cr13HPbgX4gJOD97n465GZlyVvC9mSKloKI2iTnbwNT+gBX54H+IaXAtxJzE3ycSAFqSAFJACUkAikXD+AHj5/wx2o5osAAAAAElFTkSuQmCC) no-repeat center;
+			    background-size: 24px 24px;
+			    position: absolute; /*★질문: 마이크는 어떻게 잡아야 하나요 ?*/
+			    right: 0;	    
 			}
 
 		</style>
@@ -81,7 +105,7 @@
 		<section>
 			<div class="top_logo">
 				<div class="logo">
-					<img src="https://www.google.co.nz/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png" alt="Google" width="272px" height="92px">				
+					<img src="https://www.google.co.nz/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png" alt="Google" width="272px" height="92px">			
 				<div class="nz"> New Zealand </div>
 				</div>
 			</div>
@@ -90,12 +114,12 @@
 		<!--top searching-->
 		<section>
 			<div class="search">
-				<div id="form">
-					<form> 
-  					<input type="text" id="fname" name="fname">
-					</form>
+ 				<div class="form-group">
+					<div class="col-sm-6">
+					   <input type="email" class="form-control" id="inputEmail3" placeholder="Google 검색 또는 URL 입력">	    
+					<div class="mic"></div>
+					</div>
 				</div>
-				<div id="mic"></div>
 			</div>			
 		</section>
 	</div>	

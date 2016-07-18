@@ -1,0 +1,114 @@
+<html>
+	<head>
+		<meta charset="utf-8">
+
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+		<!-- Latest compiled and minified CSS -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+		<!-- Optional theme -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+
+		<!-- Latest compiled and minified JavaScript -->
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+
+		<style>
+			.container{
+				background:gray;
+				max-width:250px;
+				min-height:300px;
+				text-align:center;
+				margin-top:20px;
+			}
+			.dsp{
+				width:200px;
+				margin:2px;	
+			}
+			.func{
+				width:200px;
+				margin:10px;
+				text-align:center;			
+			}
+
+
+		</style>
+		
+	</head>
+	<body>
+
+		<!--1. function 두수를 입력 받아 *, /, +, -를 수행하는 펑션 만들기-->
+		<!--2. 버튼(펑션실행), 팝업(결과호출) or ..-->
+
+		<script>
+			'use strict'
+
+			var num1 = 0;
+			var num2 = 0;
+			
+			function getNumber(){
+			//선언된 전역 변수에 현재 입력된 값을 대입
+			num1 = Number(document.getElementById('num1').value);
+			num2 = Number(document.getElementById('num2').value);
+			}
+		
+			function setNumber(ans){
+			//param으로 넘어온 값을 total 창에 표시
+
+			// ★질문: toPrecision 과 toFixed 의 차이가 무엇인가요 ?
+			// ★질문: (정수부.소수부) 숫자표시 정수 10자리 ? 가 정확히 무슨 의미인가요 ?
+			//		  결과값이 10자리를 초과하면 계산을 안하겠다는건가요 ?
+			//document.getElementById('total').value = ans.toPrecision(6); // toPrecision
+			document.getElementById('total').value = ans.toFixed(6); 
+			}
+
+
+			// + 함수
+			function myFuncAdd(){
+				getNumber(num1, num2);
+				var ans = num1 + num2;
+				console.log(ans);
+				return setNumber(ans);
+			}
+			// - 함수
+			function myFuncDif(){
+				var ans = num1 - num2;  //결과값이 -인경우 고려 해야하나 ?
+				console.log(ans);
+				return setNumber(ans);
+			}
+			// * 함수
+			function myFuncMul(){
+				var ans = num1 * num2;
+				console.log(ans);
+				return setNumber(ans);
+			}
+			// / 함수
+			function myFuncDiv(){
+				var ans = num1 / num2;  // 0으로 나누려고 할 경우와 num1 < num2 경우 고려 ?
+				console.log(ans);
+				return setNumber(ans);
+			}
+			
+		</script>
+
+		
+		<!--
+		<button onclick="alert(myFuncAdd(4, 3))"> + </button>
+		<button onclick="alert(myFuncDif(4, 3))"> - </button>
+		<button onclick="alert(myFuncMul(4, 3))"> * </button>
+		<button onclick="alert(myFuncDiv(4, 3))"> / </button>
+		-->
+		<div class="container">
+		<!-- input numer box -->
+		<input class="dsp" placeholder="숫자1을 입력하세요" type="text" id="num1"/> <br/>
+		<input class="dsp" placeholder="숫자2를 입력하세요" type="text" id="num2" /> <br/>
+		<input class="dsp" placeholder="결과값" type="text" id="total" disabled="true" /><br/>
+		<!-- button -->
+		<!--★질문: 브라우저를 실행시키고 더하기 버튼이 아닌 나누기 버튼을 먼저 클릭할 경우 Nan 으로 표시가 도는데 이는 순차 진행 때문인가요 ? -->
+		<button class="func" onClick="myFuncAdd();">더하기</button> <br/>
+		<button class="func" onClick="myFuncDif();">빼기</button> <br/>
+		<button class="func" onClick="myFuncMul();">곱하기</button> <br/>
+		<button class="func" onClick="myFuncDiv();">나누기</button> <br/>
+		</div>
+	</body>
+</html>
