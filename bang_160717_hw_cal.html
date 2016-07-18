@@ -12,6 +12,12 @@
 
 		<!-- Latest compiled and minified JavaScript -->
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+
+		<style>
+			.st{
+				width:300px;
+			}
+		</style>
 		
 	</head>
 	<body>
@@ -20,57 +26,67 @@
 		<!--2. 버튼(펑션실행), 팝업(결과호출)-->
 
 		<script>
-			//function myFunc(){
-			//	myFuncAdd();
-			//	myFuncDif();
-			//	myFuncMul();
-			//	myFuncDiv();
+			'use strict'
 
-			//	console.log();
-			//}
+			var num1 = 0;
+			var num2 = 0;
+			
+			function getNumber(){
+			//선언된 전역 변수에 현재 입력된 값을 대입
+			num1 = Number(document.getElementById('num1').value);
+			num2 = Number(document.getElementById('num2').value);
+			}
+		
+			function setNumber(ans){
+			//param으로 넘어온 값을 total 창에 표시
+			document.getElementById('total').value = ans;
+			}
 
 
 			// + 함수
-			function myFuncAdd(num1, num2){
-				var num1;
-				var num2;
+			function myFuncAdd(){
+				getNumber(num1, num2);
 				var ans = num1 + num2;
-				return ans;
+				console.log(ans);
+				return setNumber(ans);
 			}
 			// - 함수
-			function myFuncDif(num1, num2){
-				var num1;
-				var num2;
+			function myFuncDif(){
 				var ans = num1 - num2;  //결과값이 -인경우 고려 해야하나 ?
-				return ans;
+				console.log(ans);
+				return setNumber(ans);
 			}
 			// * 함수
-			function myFuncMul(num1, num2){
-				var num1;
-				var num2;
+			function myFuncMul(){
 				var ans = num1 * num2;
-				return ans;
+				console.log(ans);
+				return setNumber(ans);
 			}
 			// / 함수
-			function myFuncDiv(num1, num2){
-				var num1;
-				var num2;
+			function myFuncDiv(){
 				var ans = num1 / num2;  // 0으로 나누려고 할 경우와 num1 < num2 경우 고려 ?
-				return ans;
+				console.log(ans);
+				return setNumber(ans);
 			}
-
-
 			
 		</script>
 
 		<!-- 버튼 생성 // 사용자에게 두수를 입력 받으려면 ?-->
-
+		<!--
 		<button onclick="alert(myFuncAdd(4, 3))"> + </button>
 		<button onclick="alert(myFuncDif(4, 3))"> - </button>
 		<button onclick="alert(myFuncMul(4, 3))"> * </button>
 		<button onclick="alert(myFuncDiv(4, 3))"> / </button>
+		-->
 		
-		
+		<input class="st" type="text" id="num1"/> <br/>
+		<input class="st" type="text" id="num2" /> <br/>
+		<input class="st" type="text" id="total" disabled="true" /><br/>
+
+		<button class="st" onClick="myFuncAdd();">+</button> <br/>
+		<button class="st" onClick="myFuncDif();">-</button> <br/>
+		<button class="st" onClick="myFuncMul();">*</button> <br/>
+		<button class="st" onClick="myFuncDiv();">/</button> <br/>
 
 	</body>
 </html>
