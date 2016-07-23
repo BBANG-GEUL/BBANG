@@ -1,0 +1,600 @@
+<html>
+	<head lang="en">
+		<meta chraset="utf-8">
+		<!-- Latest compiled and minified CSS -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+		<!-- Optional theme -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+
+		<!-- Latest compiled and minified JavaScript -->
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+
+		<script src="https://use.fontawesome.com/4ccc872698.js"></script>
+	</head>
+	<style>
+		/*========== background image detail <fabric> ==========*/
+		.box{
+			background-image: url(http://gridus-html.neuethemes.net/108/assets/custom/images/backgrounds/dark_fabric.png);
+		}
+
+	
+		/*========== top left profile detail ==========*/
+		#photo{
+			background-image: url(http://gridus-html.neuethemes.net/108/assets/custom/images/userpic01.jpg);
+			background-position: center center;
+		    background-repeat: no-repeat;
+		    background-size: cover;
+		    height:300px;
+		}		
+		/*========== top right profile detail ==========*/
+		.container .row .row1 #name{
+			background-color:#4f4f4f;
+			height:100px;
+		}
+		/*user name (samuel ~) setting*/
+		.container .row .row1 #name #user_name{
+			font-family: "Dosis", sans-serif;
+    		font-weight: 300;
+    		text-transform: uppercase;
+    		font-size:40px;
+    		color:#ffffff;
+		}
+		/*user name job font (web designer~) setting*/
+		#job{
+			font-family: "Dosis", sans-serif;
+			font-size: 24px;
+		    line-height: 1.8em;
+		    white-space: nowrap;
+		    overflow: hidden;
+		    text-overflow: ellipsis;
+		    letter-spacing: 2px;
+		    text-transform: uppercase;
+		    color:#ffffff;
+		    font-weight: 300;
+		    padding-top:30px;
+		}
+		/* PDF download setting */
+		.container .row .row1 #dw1{
+			background-color:#474747;
+			height:100px;
+		}
+		/* job setting */
+		.container .row .row2 #job{
+			background-color:#3f3f3f;
+			height:100px;
+		}
+		/* BE download setting */
+		.container .row .row2 #dw2{
+			background-color:#373737;
+			height:100px;
+		}
+		
+
+		/*========== last row style detail ==========*/
+		.container .row .row3 #t_sb{
+			padding:0;
+			list-style: none;
+			color:#ffffff;
+			font-size:13px;
+			text-align:center;
+		}
+		/* last row 6subs style */
+		.container .row .row3 #sb1{
+			background-color:#1abc9c;
+			height:100px;
+		}
+		.container .row .row3 #sb2{
+			background-color:#3498db;
+			height:100px;
+		}
+		.container .row .row3 #sb3{
+			background-color:#9b59b6;
+			height:100px;
+		}
+		.container .row .row3 #sb4{
+			background-color:#e67e22;
+			height:100px;
+		}
+		.container .row .row3 #sb5{
+			background-color:#e74c3c;
+			height:100px;
+		}
+		.container .row .row3 #sb6{
+			background-color:#d9a81d;
+			height:100px;
+		}
+
+
+		/*========== contents detail ==========*/
+		.box .container .conts{
+			background:#ffffff;
+			height:398px;
+		}
+		/* about me, personal info font detail */
+		#h3st{
+			text-transform: uppercase;
+			font-family: "Dosis", sans-serif;
+    		font-weight: 400;
+    		line-height: 1.2em;
+    		font-size: 32px;
+    		letter-spacing: 1px;
+    		padding-left:10px;
+		}
+		/* behind of "about me" sentence font detail */
+		.container .conts .row_c .col-sm-8 .abtdt{
+			text-transform:uppercase;
+			color: #e74c3c;
+			font-family: "Montserrat", sans-serif;
+		    font-weight: 700;
+		    font-style: normal;
+		    letter-spacing: 3px;
+		    font-size: 14px;
+		}
+		/* creative, motivated, punctual font detail */
+		#h5st{
+			text-transform:uppercase;
+			margin-top: 10px;
+    		margin-bottom: 10px;
+    		font-size: 14px;
+    		line-height: 1.1;
+    		letter-spacing: 3px;
+    		font-family: "Montserrat", sans-serif;
+		    font-weight: 700;
+		    font-style: normal;		
+		}
+		#h5st_ct{
+			text-transform:uppercase;
+			margin-top: 10px;
+    		margin-bottom: 10px;
+    		font-size: 14px;
+    		line-height: 1.1;
+    		letter-spacing: 3px;
+    		font-family: "Montserrat", sans-serif;
+		    font-weight: 700;
+		    font-style: normal;	
+		    padding-left:10px;	
+		}
+
+		/*behind of "creative, motivated, punctual" sentence font detail*/	
+		#pst{
+			line-height: 20px;
+		    font-weight: 400;
+		    color: #2f2f2f;
+		    letter-spacing: 1px;
+		    font-size: 12px;
+		}
+		/* personal info section detail */
+		#psninfo{
+			background-color: #efefef;
+			height:398px;
+		}
+		#fb{
+			height :50px;
+		}
+		#one{
+		 	font-size:11px;
+		 	padding:0px;
+		 	width:100px;
+		 	text-transform:uppercase;
+			letter-spacing: 1px;
+    		font-family: "Montserrat", sans-serif;
+		    font-weight: 700;
+		    font-style: normal;
+		}
+		#two{
+		 	font-weight: 400;
+		    color: #2f2f2f;
+		    letter-spacing: 1px;
+		    font-size: 12px;
+		}
+
+
+		/*========== bottom section detail ==========*/
+		.container .bottom{
+			height:380px;
+		}
+		/* bottom left list setting */
+		#pe_1{
+			/*list-style: none;*/
+			border-left: 1px solid #ffffff;
+			padding-left:14px;
+		}
+		/* bottom left setting */
+		#bt_lft{
+			background:#9b59b6;
+			padding: 10px 50px 20px 20px;
+			height:398px;
+		}
+		/* bottom right setting */
+		#bt_rgt{
+			background:#3498db;
+			height:398px;
+		}
+		/* bottom left date list setting */
+		#date{
+			font-size: 11px;
+ 		    margin-bottom: 0;
+		    color: #ffffff;
+		    position: relative;
+		    display: block;
+		    font-weight: 400;
+		    line-height: 1.2em;
+		}
+		/* bottom left company list setting */
+		#company{
+			position: relative;
+	        font-size: 16px;
+	        font-weight: bold;
+	        color:#ffffff;
+
+		}
+		/* bottom left position list setting */
+		#position{
+		    font-size: 12px;
+ 		    margin-bottom: 0;
+		    color: #ffffff;
+		    position: relative;
+		    display: block;
+		    font-weight: 400;
+		    line-height: 1.2em;
+		}
+		/* height margin div */
+		#divht{
+			height:40px;
+		}
+		/* h3 style setting */
+		#h3st_pr{
+			color:#ffffff;
+			text-transform: uppercase;
+		    font-family: "Dosis", sans-serif;
+    		font-weight: 400;
+    		line-height: 1.2em;
+    		font-size: 32px;
+    		letter-spacing: 1px;
+    		padding-left:10px;
+    	}
+    	/* h4 style setting */
+    	#h4st{
+    		text-transform: uppercase;
+    		font-family: "Montserrat", sans-serif;
+		    font-weight: 400;
+		    font-style: normal;
+		    color:#ffffff;
+		    font-size: 18px;
+    	}
+    	/* sentence behind of circle */
+    	#crct{
+    		font-family: "Raleway", sans-serif;
+		    font-style: normal;
+		    font-weight:normal;
+		    color:#ffffff;
+		    font-size: 13px;
+    	}
+    	/* numbers in circle detail */
+		#crc_name{
+			position: absolute;
+			left:45px;
+			top:45px;
+			color:#ffffff;
+			font-size:25px;
+			font-family: "Montserrat", sans-serif;
+			font-weight:400;
+		}
+		/* Learn More detail */
+		#lm{
+			border:none;
+			border-radius:0;
+			background: rgba(255, 255, 255, 0.1);
+			font-size:10px;
+			color:#ffffff;			
+		}
+
+
+		/*========== foot section detail ==========*/
+		#foot{
+			background:#474747;
+		}
+		#h4st_hd{
+			font: 13px/1.7 "Raleway", sans-serif;
+			color:#e0e0e0;
+			letter-spacing:3px;
+		}
+		/* (Quality Web Design, Ui ~) */
+		#ft_ct{
+			padding-top: 10px;
+		    font-size: 12px;
+		    color: #b7b7b7;
+		}
+		/* (© 2016 Samuel Anderson.) */
+		#ft_ft{
+			font-size: 5px;
+			letter-spacing:1px;
+			color:#d0d0d0;
+		}
+		/* foot input email address detail */
+		.newsletter-email{
+			border-color: #7f7f7f;
+		    margin-bottom: 8px;
+		    padding: 4px 8px;
+		    border-radius: 0;
+		    color: #ffffff;
+		    letter-spacing: 1px;
+		    font-family: "Raleway","Helvetica Neue",Helvetica,Arial,sans-serif;
+		    background: none !important;
+		    border: 1px solid #d7d7d7;
+		    width: 100%;
+		    font-size:11px;
+		}
+		/* foot sns icon detail */
+		#sns{
+			list-style: none;
+			display:inline-flex;
+			padding:0;
+			color:#a3a3a3;
+		}
+
+	</style>
+	<body>
+	<!--1. 레이아웃 설정 -->
+	<!--2. bootstrap 이용 div. container, col, row -->
+	<div class="box">
+		<div class="container">
+
+		<!--top user information-->
+		<senction>
+			<div class="row">
+			<div class="col-sm-12">
+				<!-- top left profile image column -->
+				<!-- ★미해결: 현재 좌우 여백 생김 없애야함 -->
+				<div class="col-sm-4" id="photo"></div>
+				<!-- 1st row detail -->
+					<div class="row1">
+					<div class="col-sm-8">
+						<div class="col-sm-10" id="name">
+							<h2 id="user_name"> Samuel Anderson </h2>
+						</div>
+						<!-- ★미해결: 아이콘 소스 못찾음 -->
+						<div class="col-sm-2" id="dw1"></div>
+					</div>
+					</div>
+					<!-- 2nd row detail -->
+					<div class="row2">
+					<div class="col-sm-8">
+						<div class="col-sm-10" id="job"><span>the experienced web designer</span></div>
+						<!-- ★미해결: 아이콘 소스 못찾음 -->
+						<div class="col-sm-2" id="dw2"></div>						
+					</div>
+					</div>
+					<!-- 3rd row detail -->
+					<div class="row3">
+					<div class="col-sm-8">
+						<ul id="t_sb">
+						<!-- ★미해결: text 위치 조정 해야함 -->
+							<li class="col-sm-2" id="sb1"><span>HOME</span></li>
+							<li class="col-sm-2" id="sb2"><span>RESUME</span></li>
+							<li class="col-sm-2" id="sb3"><span>PORTFOLIO</span></li>
+							<li class="col-sm-2" id="sb4"><span>CONTACTS</span></li>
+							<li class="col-sm-2" id="sb5"><span>FEEDBACK</span></li>
+							<li class="col-sm-2" id="sb6"><span>BLOG</span></li>
+						</ul>
+					</div>
+					</div>
+			</div>	
+			</div>			
+		</senction>	
+		
+		<!--contents-->
+		<section>
+			<div class="conts">
+				<!-- contents left detail -->
+				<div class="row_c">
+					<div class="col-sm-8">
+						<div class="abtme">
+							<h3 id="h3st">ABOUT ME</h3></div>
+						<div class="abtdt">
+							<h5 id="h5st_ct">Hard-working person on the way to the success...</h5></div>
+						<div class="abtct">
+							<div class="col-sm-4">
+								<div class="col-sm-3" id="ct_icon">
+									<!-- ★미해결: 이미지로 대체 하는게 맞는가? -->
+									<img src="./img/1.jpg" width="32px" heigh="22px" alt="creative">
+								</div>
+								<div class="col-sm-9" id="ct_sent">
+									<h5 id="h5st">CREAtive</h5>
+									<p id="pst">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sit amet hendrerit dolor, at lacinia mi.</p></div>
+							</div>
+							<div class="col-sm-4">
+								<div class="col-sm-3" id="ct_icon">
+									<!-- ★미해결: 이미지로 대체 하는게 맞는가? -->
+									<img src="./img/2.jpg" width="32px" heigh="22px" alt="motivated">
+								</div>
+								<div class="col-sm-9" id="ct_sentclass="col-sm-9" >
+									<h5 id="h5st">MOTIVATED</h5>
+									<p id="pst">Curabitur sit amet laoreet leo. Maecenas eget pulvinar arcu. Quisque fermentum nulla non urna placerat.</p></div>
+							</div>
+							<div class="col-sm-4">
+								<div class="col-sm-3" id="ct_icon">
+									<!-- ★미해결: 이미지로 대체 하는게 맞는가? -->
+									<img src="./img/3.jpg" width="32px" heigh="22px" alt="punctual">
+								</div>
+								<div class="col-sm-9" id="ct_sent">
+									<h5 id="h5st">PUNCTUAL</h5>
+									<p id="pst">Sed scelerisque elit eget eros consectetur varius. Suspendisse laoreet rhoncus pellentesque.</p></div>
+							</div>
+						</div>
+					</div>
+					<!-- contents right detail -->
+					<div class="col-sm-4" id="psninfo">
+						<div>
+							<h3 id="h3st">personal info</h3></div>
+							<div id="divht"></div>
+							<div class="col-sm-12" id="fb">
+								<div class="col-sm-5" id="one">NAME:</div>
+								<div class="col-sm-7" id="two">Samuel Anderson</div>
+							</div>
+							<div class="col-sm-12" id="fb">
+								<div class="col-sm-5" id="one">DATE OF BIRTH:</div>
+								<div class="col-sm-7" id="two">03/12/1980</div>
+							</div>
+							<div class="col-sm-12" id="fb">
+								<div class="col-sm-5" id="one">ADDRESS:</div>
+								<div class="col-sm-7" id="two">1234, Direct drive, Daytona Beach, Fl, USA</div>
+							</div>								
+							<div class="col-sm-12" id="fb">
+								<div class="col-sm-5" id="one">PHONE:</div>
+								<div class="col-sm-7" id="two">1 234 567 89 10</div>
+							</div>
+							<div class="col-sm-12" id="fb">
+								<div class="col-sm-5" id="one">EMAIL:</div>
+								<div class="col-sm-7" id="two">james@anderson.com</div>
+							</div>
+					</div>
+
+				</div>
+			</div>
+		</section>
+
+		<!--bottom-->
+		<!-- ★미해결: 왼쪽 ㅡ*ㅡ*ㅡ 모양 불완전 -->						
+		<section>
+			<div class="bottom">
+				<div class="row_b">
+					<div class="col-sm-4" id="bt_lft">
+						<div class="pro">							
+							<h3 id="h3st_pr">pro. expeience</h3>
+							<div id="divht"></div></div>
+							<ul id="pe_1">
+								<li id="date">02/2008 - 04/2010</li>
+								<li id="company">ABC BRODCAST INC. NEW YORK.</li>
+								<li id="position">Junior Designer</li>
+							</ul>
+							<ul id="pe_1">
+								<li id="date">04/2010 - 06/2012</li>
+								<li id="company">LEO BURNETT LONDON OFFICE</li>
+								<li id="position">Senior Designer</li>
+							</ul>
+							<ul id="pe_1">
+								<li id="date">06/2012 - present</li>
+								<li id="company">GOOGLE INC. DUBLIN.</li>
+								<li id="position">UI/UX Designer</li>
+							</ul>
+							<div id="divht"></div>
+							<a class="btn btn-default" id="lm" href="#" role="button">Learn More</a>
+					</div>
+					<div class="col-sm-8" id="bt_rgt">
+						<div class="skill">							
+							<h3 id="h3st_pr">my professional skills</h3>
+							<div id="divht"></div></div>
+							<div class="circle">
+								<div class="col-sm-4" id="crc">
+									<div id="crc_name">72.5%</div>
+									<div id="crc_img">
+										<canvas id="myCanvas" width="120px" height="120px"></canvas>		
+										<script>
+										var c = document.getElementById("myCanvas");
+										var ctx = c.getContext("2d");
+										ctx.beginPath();
+										ctx.arc(60, 60, 50, 0, 2 * Math.PI);
+										ctx.lineWidth=3;
+										ctx.strokeStyle="#ffffff";
+										ctx.stroke();
+										</script>
+<!-- svg? canvas?									
+<svg height="100" width="100">
+  <circle cx="50" cy="50" r="40" stroke="white" stroke-width="3" fill="black" />
+  Sorry, your browser does not support inline SVG.
+</svg>-->	
+									</div>
+									<div id="crc_cnt">
+										<h4 id="h4st">PROTOTYPING</h4>
+										<p id="crct">A prototype is an early sample, model, or release of a product built to test ...</p>
+									</div>
+									<a class="btn btn-default" id="lm" href="#" role="button">Learn More</a>
+								</div>
+								<div class="col-sm-4" id="crc">
+									<div id="crc_name">94.5%</div>
+									<div id="crc_img">
+										<canvas id="myCanvas2" width="120px" height="120px"></canvas>
+										<script>
+										var c = document.getElementById("myCanvas2");
+										var ctx = c.getContext("2d");
+										ctx.beginPath();
+										ctx.arc(60, 60, 50, 0, 2 * Math.PI);
+										ctx.lineWidth=3;
+										ctx.strokeStyle="#ffffff";
+										ctx.stroke();
+										</script>										
+									</div>
+									<div id="crc_cnt">
+										<h4 id="h4st">DESIGN</h4>
+										<p id="crct">Design is the creation of a plan or convention for the construction of an object ...</p>
+									</div>
+									<a class="btn btn-default" id="lm" href="#" role="button">Learn More</a>
+								</div>
+								<div class="col-sm-4" id="crc">
+									<div id="crc_name">30.5%</div>
+									<div id="crc_img">
+										<canvas id="myCanvas3" width="120px" height="120px"></canvas>
+										<script>
+										var c = document.getElementById("myCanvas3");
+										var ctx = c.getContext("2d");
+										ctx.beginPath();
+										ctx.arc(60, 60, 50, 0, 2 * Math.PI);
+										ctx.lineWidth=3;
+										ctx.strokeStyle="#ffffff";
+										ctx.stroke();
+										</script>
+									</div>
+									<div id="crc_cnt">
+										<h4 id="h4st">DEVELOPMENT</h4>
+										<p id="crct">Software development is the process of computer programming ...</p>
+									</div>
+									<a class="btn btn-default" id="lm" href="#" role="button">Learn More</a>
+									<div id="divht"></div>
+								</div>
+							</div>
+					</div>
+				</div>
+			</div>			
+		</section>
+		<!-- foot detail -->
+		<!-- ★미해결: 다운로드 아이콘, SNS 아이콘, 자바스크립트 -->
+		<section>
+			<div class="col-sm-12" id="foot">
+				<div class="col-sm-3">
+					<h4 id="h4st_hd">SAMUEL ANDERSON</h4>
+					<p id="ft_ct">Quality Web Design, Ui / UX Design. Part-time or Fulltime.</p>
+				</div>
+				<div class="col-sm-3">
+					<h4 id="h4st_hd">DOWNLOAD CV</h4>
+					<ul id="sns">
+							<li><img src="./img/4.jpg" width="17px" height="17px" alt="dw_icon">English</li>
+							<li><img src="./img/4.jpg" width="17px" height="17px" alt="dw_icon">German</li>
+							<li><img src="./img/4.jpg" width="17px" height="17px" alt="dw_icon">Spanish</li>
+						</ul>
+				</div>
+				<div class="col-sm-3">
+					<h4 id="h4st_hd">NEWSLETTER</h4>
+					<input class="newsletter-email" type="email" required="" name="ne" placeholder="Your Email">
+				</div>
+				<div class="col-sm-3">
+					<h4 id="h4st_hd">FOLLOW ME</h4>
+					<ul id="sns">
+						<li><img src="./img/5.jpg" width="32px" height="32px" alt="facebook"></li>
+						<li><img src="./img/6.jpg" width="32px" height="32px" alt="twitter"></li>
+						<li><img src="./img/7.jpg" width="32px" height="32px" alt="pinterest"></li>
+						<li><img src="./img/8.jpg" width="32px" height="32px" alt="instagram"></li>
+						<li><img src="./img/9.jpg" width="32px" height="32px" alt="youtube"></li>
+					</ul>
+				</div>
+				<div class="col-sm-12">
+					<div id="divht"></div>
+					<p id="ft_ft">© 2016 Samuel Anderson.</p>
+				</div>
+			</div>
+		</section>
+	</div>
+	</div>
+	</body>
+</html>

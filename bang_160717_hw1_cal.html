@@ -72,18 +72,21 @@
 			}
 			// - 함수
 			function myFuncDif(){
+				getNumber(num1, num2);
 				var ans = num1 - num2;  //결과값이 -인경우 고려 해야하나 ?
 				console.log(ans);
 				return setNumber(ans);
 			}
 			// * 함수
 			function myFuncMul(){
+				getNumber(num1, num2);
 				var ans = num1 * num2;
 				console.log(ans);
 				return setNumber(ans);
 			}
 			// / 함수
 			function myFuncDiv(){
+				getNumber(num1, num2);
 				var ans = num1 / num2;  // 0으로 나누려고 할 경우와 num1 < num2 경우 고려 ?
 				console.log(ans);
 				return setNumber(ans);
@@ -104,7 +107,7 @@
 		<input class="dsp" placeholder="숫자2를 입력하세요" type="text" id="num2" /> <br/>
 		<input class="dsp" placeholder="결과값" type="text" id="total" disabled="true" /><br/>
 		<!-- button -->
-		<!--★질문: 브라우저를 실행시키고 더하기 버튼이 아닌 나누기 버튼을 먼저 클릭할 경우 Nan 으로 표시가 도는데 이는 순차 진행 때문인가요 ? -->
+		
 		<button class="func" onClick="myFuncAdd();">더하기</button> <br/>
 		<button class="func" onClick="myFuncDif();">빼기</button> <br/>
 		<button class="func" onClick="myFuncMul();">곱하기</button> <br/>

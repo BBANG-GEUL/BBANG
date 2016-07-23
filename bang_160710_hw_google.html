@@ -14,10 +14,13 @@
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
 
 		<style>
+			/*========== top container detail ==========*/
 			.container{
 				background:white;
 			}
 
+
+			/*========== top right detail ==========*/
 			.container .top_rgt{
 				float:right;
 				display:inline-flex;
@@ -31,8 +34,7 @@
 			}
 
 
-			
-			/* top logo style */
+			/*========== logo section detail ==========*/
 			.container .top_logo{
 				position:relative;
 			}
@@ -47,35 +49,45 @@
 				color: #4285f4;
 			    font-size: 16px;
 			    left: 79px;
-			    position:relative;  /*★질문: absolute 세팅시 안되는 이유는 ?*/
+			    position:relative; 
 			    top: -20px;
 			    white-space: nowrap;
-			    width: 0;
-			    
+			    width: 0;			    
 			}
 
-			/*top search style*/
+
+			/*========== search section detail ==========*/
 			.container .search{
 				position:relative;
-				background:gray;	   
-			}
-			/*search form style*/
-			.container .search .form-group .col-sm-6{
-				position:center;	
-				margin-left:300px;
-				position:relative;	    
-			}
+				background:gray;
+				width:600px;
+				left:250px;	   
+			}		
 			/*search mic style*/
-			.container .search .form-group .col-sm-6 .mic{
-				/*background:yellow;*/
-				cursor: pointer;  
-			    height: 21px;
-			    padding: 15px 6px 0; 
-			    width: 17px;
-			    background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAACrElEQVR42u2Xz2sTQRSAX8VSb1K8iNqKooJH2Ux6Ksn+iPQqxZMIehJB0do/IMhmQWsvHr2KSEGk0tSLIoWIYNUKij20F2/N7iaUZnYT0kYzzhMKs0HDJiTdLcwHDwKZSd63781LBiQSSW9JZdkhzfKm1Rz9mjZp/W9YdEU3vXv4HsQZ40FtNG36q5rls//Ej4tmbSS2T15Mvp3ExOPmEMQNbBtMMEyoljcFcQN7PqyAlqNfIG7gYQ0tYNIaxA1MrJPY3wImbUqBKAXSFv0tBSIVMOkvKRDtGKWN/T6FdqRAxFNoWwpEPIXqUqBT6ALU/UVgu8GW4GD3f6f9TRDYNJTDrk7YbtiqUumHwIYoUJuHERDAS0r4CvgFECgbY+cFAR7KT+g1POmCKFDNw6WggHc3fBtVb4CAoyauBgXIG+g1Xh5mRAGah6cggBd11fK/h7lOprIs0H6uRl6KAo5O7kOv4QmPiwJ4Jqqv4FiwCtXjvD2+tRmfK6kZ/ygI2HritK0rDVGgrClJ6DWMwYC/AGuCBMYcIC2V0CzvjmbRz3j3xUjn6CfeYreUJ2wQkGD75INPX1mFfsEFrrcIYCvdhC4paWQakxajpJMr0C9YFg54i7AsClRmh9/xnr0NHcInzZStk2aLwAcGMAD9pPIazvFKVDD5rdnhJeHLX5RTyRPQHpz5o66emMc9wdlPtvA8wF7Aq2BUHh1525qEo5JtR1WeOXpickO9cJIpyuD6xJmhYiZ5ytWSl3mlnuOaf+2zDaLDXmJrSgZ/MYVEugo+gSh+FkSBa4yd5Ul87DZ5XpFl/AyIEjzYjkau8WqshU2cr13HPbgX4gJOD97n465GZlyVvC9mSKloKI2iTnbwNT+gBX54H+IaXAtxJzE3ycSAFqSAFJACUkAikXD+AHj5/wx2o5osAAAAAElFTkSuQmCC) no-repeat center;
-			    background-size: 24px 24px;
-			    position: absolute; /*★질문: 마이크는 어떻게 잡아야 하나요 ?*/
-			    right: 0;	    
+			.container .search #mic{
+				position: absolute;
+			    right: 0px;
+			    top:5px;			    	    
+			}
+
+
+			/*========== favorite section detail ==========*/
+			.container .botfav{
+				margin-top:40px;
+				margin-left:250px;
+			}
+
+
+			#gg{
+				list-style:none;
+			}
+			#ga{
+				text-decoration:none;
+				color:#000000;
+			}
+			#dropdownMenu1{
+				border:none;
+				background:#ffffff;
 			}
 
 		</style>
@@ -87,17 +99,71 @@
 		<!--4. 서칭 : 폼 서식 이용 , 마이크 소스 찾기 -->
 
 	<div class="container">
-
 		<!--top right section-->
 		<section>
 		<div class="top_rgt">
 			<div class="sub1" id="gmail">
-				<a data-pid="23" href="https://mail.google.com/mail/">Gmail</a></div>
+				<a id="ga" data-pid="23" href="https://mail.google.com/mail/">Gmail</a></div>
 			<div class="sub1" id="img"	>
-				<a data-pid="2" href="https://www.google.co.nz/imghp?hl=ko&amp;ei=YK-GV9CaOoH20gSOirtQ&amp;ved=0EKouCAIoAQ">이미지</a></div>
-			<div class="sub1" id="apps"	>앱상자</div>
-			<div class="sub1" id="alam"	>알림</div>
-			<div class="sub1" id="host"	>계정</div>
+				<a id="ga" data-pid="2" href="https://www.google.co.nz/imghp?hl=ko&amp;ei=YK-GV9CaOoH20gSOirtQ&amp;ved=0EKouCAIoAQ">이미지</a></div>
+			<div class="sub1" id="apps"	>
+				<div class="dropdown">
+				  <button class="glyphicon glyphicon-th" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">				    
+				  </button>
+				 <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+					<li id="gg">
+						<a id="ga" href="https://myaccount.google.com/?utm_source=OGB">
+						<img src="./img/g1.png" alt="내계정">내계정</a>
+					</li>
+					<li id="gg">
+						<a id="ga" href="https://www.google.co.nz/webhp?ei=0RmKV-27Nsyj0gSWoKaICg&amp;ved=0EKkuCAUoAw">
+						<img src="./img/g2.png" alt="검색">검색</a>
+					</li>
+					<li id="gg">
+						<a id="ga" href="https://maps.google.co.nz/maps?hl=ko">
+						<img src="./img/g3.png" alt="지도">지도</a>
+					</li>
+					<li id="gg">
+						<a id="ga" href="https://www.youtube.com/?gl=NZ">
+						<img src="./img/g4.png" alt="YouTub">YouTube</a>
+					</li>
+					<li id="gg">
+						<a id="ga" href="https://play.google.com/?hl=ko">
+						<img src="./img/g5.png" alt="Play">Play</a>
+					</li>
+					<li id="gg">
+						<a id="ga" href="">
+						<img src="./img/g6.png" alt="뉴스">뉴스</a>
+					</li>
+					<li id="gg">
+						<a id="ga" href="https://mail.google.com/mail/">
+						<img src="./img/g7.png" alt="Gmail">Gmail</a>
+					</li>
+					<li id="gg">
+						<a id="ga" href="https://drive.google.com/?authuser=0">
+						<img src="./img/g8.png" alt="드라이브">드라이브</a>
+					</li>
+					<li id="gg">
+						<a id="ga" href="https://www.google.com/calendar">
+						<img src="./img/g9.png" alt="캘린더">캘린더</a>
+					</li>
+					<li id="gg">
+						<a id="ga" href="https://plus.google.com/u/0">
+						<img src="./img/g10.png" alt="Google+">Google+</a>
+					</li>
+					<li id="gg">
+						<a id="ga" href="https://translate.google.co.nz/?hl=ko">
+						<img src="./img/g11.png" alt="번역">번역</a>
+					</li>
+					<li id="gg">
+						<a id="ga" href="https://photos.google.com/">
+						<img src="./img/g12.png" alt="사진">사진</a>
+					</li>
+				</ul>
+				</div>
+			</div>
+			<div class="sub1" id="alam"	><img src="./img/bell.png" width="24px" height="24px" alt="알림"></div>
+			<div class="sub1" id="host"	><img src="./img/bg.png" width="24px" height="24px" alt="방글"></div>
 		</div>			
 		</section>
 
@@ -114,14 +180,72 @@
 		<!--top searching-->
 		<section>
 			<div class="search">
- 				<div class="form-group">
-					<div class="col-sm-6">
-					   <input type="email" class="form-control" id="inputEmail3" placeholder="Google 검색 또는 URL 입력">	    
-					<div class="mic"></div>
-					</div>
-				</div>
+ 				
+				   <input type="email" class="form-control" id="inputEmail3" placeholder="Google 검색 또는 URL 입력">	    
+					<div id="mic"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAACrElEQVR42u2Xz2sTQRSAX8VSb1K8iNqKooJH2Ux6Ksn+iPQqxZMIehJB0do/IMhmQWsvHr2KSEGk0tSLIoWIYNUKij20F2/N7iaUZnYT0kYzzhMKs0HDJiTdLcwHDwKZSd63781LBiQSSW9JZdkhzfKm1Rz9mjZp/W9YdEU3vXv4HsQZ40FtNG36q5rls//Ej4tmbSS2T15Mvp3ExOPmEMQNbBtMMEyoljcFcQN7PqyAlqNfIG7gYQ0tYNIaxA1MrJPY3wImbUqBKAXSFv0tBSIVMOkvKRDtGKWN/T6FdqRAxFNoWwpEPIXqUqBT6ALU/UVgu8GW4GD3f6f9TRDYNJTDrk7YbtiqUumHwIYoUJuHERDAS0r4CvgFECgbY+cFAR7KT+g1POmCKFDNw6WggHc3fBtVb4CAoyauBgXIG+g1Xh5mRAGah6cggBd11fK/h7lOprIs0H6uRl6KAo5O7kOv4QmPiwJ4Jqqv4FiwCtXjvD2+tRmfK6kZ/ygI2HritK0rDVGgrClJ6DWMwYC/AGuCBMYcIC2V0CzvjmbRz3j3xUjn6CfeYreUJ2wQkGD75INPX1mFfsEFrrcIYCvdhC4paWQakxajpJMr0C9YFg54i7AsClRmh9/xnr0NHcInzZStk2aLwAcGMAD9pPIazvFKVDD5rdnhJeHLX5RTyRPQHpz5o66emMc9wdlPtvA8wF7Aq2BUHh1525qEo5JtR1WeOXpickO9cJIpyuD6xJmhYiZ5ytWSl3mlnuOaf+2zDaLDXmJrSgZ/MYVEugo+gSh+FkSBa4yd5Ul87DZ5XpFl/AyIEjzYjkau8WqshU2cr13HPbgX4gJOD97n465GZlyVvC9mSKloKI2iTnbwNT+gBX54H+IaXAtxJzE3ycSAFqSAFJACUkAikXD+AHj5/wx2o5osAAAAAElFTkSuQmCC" height="24px" width="24px" alt="mic"></div>
+				
 			</div>			
 		</section>
+
+		<!--favorite-->
+			<section>
+				<div class="botfav">	
+					<div class="col-md-8">
+					   <div class = "col-md-3">
+					      <a href = "http://www.naver.com" class = "thumbnail">
+					         <div id="fav-txt">NAVER</div>
+					         <img src = "C:\Users\banggeul\Desktop\HW\img\naver.jpg" alt = "NAVER">
+					      </a>
+					   </div>
+   					   
+					   <div class = "col-md-3">
+					      <a href = "http://www.gmarket.co.kr" class = "thumbnail">
+					         <div id="fav-txt">Gmarket</div>
+					         <img src = "C:\Users\banggeul\Desktop\HW\img\gmarket.jpg" alt = "Gmarket">
+					      </a>
+					   </div>
+					   
+					   <div class = "col-md-3">
+					      <a href = "http://www.w3schools.com/" class = "thumbnail">
+					      	 <div id="fav-txt">W3School</div>
+					         <img src = "C:\Users\banggeul\Desktop\HW\img\w3school.jpg" alt = "W3School">
+					      </a>
+					   </div>
+				       <div class = "col-md-3">
+					      <a href = "http://gridus-html.neuethemes.net/108/home.html" class = "thumbnail">
+					         <div id="fav-txt">Samuel</div>
+					         <img src = "C:\Users\banggeul\Desktop\HW\img\samuel.jpg" alt = "Samuel">
+					      </a>
+					   </div> 
+					    <div class = "col-md-3">
+					      <a href = "http://www.naver.com" class = "thumbnail">
+					         <div id="fav-txt">NAVER</div>
+					         <img src = "C:\Users\banggeul\Desktop\HW\img\naver.jpg" alt = "NAVER">
+					      </a>
+					   </div>
+   					   
+					   <div class = "col-md-3">
+					      <a href = "http://www.gmarket.co.kr" class = "thumbnail">
+					         <div id="fav-txt">Gmarket</div>
+					         <img src = "C:\Users\banggeul\Desktop\HW\img\gmarket.jpg" alt = "Gmarket">
+					      </a>
+					   </div>
+					   
+					   <div class = "col-md-3">
+					      <a href = "http://www.w3schools.com/" class = "thumbnail">
+					      	 <div id="fav-txt">W3School</div>
+					         <img src = "C:\Users\banggeul\Desktop\HW\img\w3school.jpg" alt = "W3School">
+					      </a>
+					   </div>
+				       <div class = "col-md-3">
+					      <a href = "http://gridus-html.neuethemes.net/108/home.html" class = "thumbnail">
+					         <div id="fav-txt">Samuel</div>
+					         <img src = "C:\Users\banggeul\Desktop\HW\img\samuel.jpg" alt = "Samuel">
+					      </a>
+					   </div>   
+					</div>
+				</div>
+			</section>
 	</div>	
 	</body>
 </html>
