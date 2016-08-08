@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<meta charset="utf-8">
+	
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+	<!-- Optional theme -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+
+	<link rel="stylesheet" href="assets/css/style.css">
+
+	
+	<script src="http://code.jquery.com/jquery-1.12.4.js" integrity="sha256-Qw82+bXyGq6MydymqBxNPYTaUXXq7c8v3CwiYwLLNXU=" crossorigin="anonymous"></script>
+
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+
+	<script type="text/javascript" src="assets/js/login.js"></script>
+	</head>
+
+	<body onload="init()">
+		<div class="container">
+			<div class="login-form">
+				<div class="panel panel-default">
+  					<div class="panel-body">
+						<form class="form-horizontal">
+						  <div class="form-group">
+						    <label for="inputEmail3" class="col-sm-2 control-label">Email</label>
+						    <div class="col-sm-10">
+						      <input type="email" class="form-control" id="inputEmail3" placeholder="Email">
+						    </div>
+						  </div>
+						  <div class="form-group">
+						    <label for="inputPassword3" class="col-sm-2 control-label">Password</label>
+						    <div class="col-sm-10">
+						      <input type="password" class="form-control" id="inputPassword3" placeholder="Password">
+						    </div>
+						  </div>
+						  <div class="form-group">
+						    <div class="col-sm-offset-2 col-sm-10">
+						      <div class="checkbox pull-left">
+						        <label>
+						          <input type="checkbox"> Remember me
+						        </label>
+						      </div>
+						      <div class="signup pull-right">
+						      	<a href="#">sign up</a>
+						      </div>
+						    </div>
+						    <div class="clearfix"></div>
+						  </div>
+						  <div class="form-group">
+						    <div class="col-sm-offset-2 col-sm-10">
+						      <button id="doLogin" type="submit" class="btn btn-primary btn-block" onClick="login()">Sign in</button>
+						    </div>
+			 			  </div>
+						</form>
+					</div> <!-- panel -->					
+				</div> <!-- panel body -->
+				<div class="confirmed_form">
+						<div class="alert alert-success" role="alert">login success</div>
+				</div>
+				<div class="failed_form">
+						<div class="alert alert-danger" role="alert">login fail</div>
+				</div>
+			</div> <!-- login-form -->
+		</div> <!-- container -->
+	</body>
+	<script>
+		$(login.init);
+	</script>
+</html>
