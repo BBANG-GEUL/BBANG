@@ -1,32 +1,33 @@
 <html>
 	<head>
-		<meta charset="utf-8">
-	
-		<!-- Latest compiled and minified CSS -->
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+		<meta charset="UTF-8">
+	    <!-- Latest compiled and minified CSS -->
+	    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
-		<!-- Optional theme -->
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+	    <!-- Optional theme -->
+	    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
 
-		<link rel="stylesheet" href="assets/css/style.css">
+	    <link rel="stylesheet" href="./assets/css/style.css">
 
-		
-		<script src="http://code.jquery.com/jquery-1.12.4.js" integrity="sha256-Qw82+bXyGq6MydymqBxNPYTaUXXq7c8v3CwiYwLLNXU=" crossorigin="anonymous"></script>
+	    <script   src="https://code.jquery.com/jquery-1.12.4.min.js"   integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="   
+	    crossorigin="anonymous"></script>
 
-		<!-- Latest compiled and minified JavaScript -->
-		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+	    <!-- Latest compiled and minified JavaScript -->
+	    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
-		<script type="text/javascript" src="assets/js/signup.js"></script>
+	    <script type="text/javascript" src="./assets/js/config.js"></script>
+	    <script type="text/javascript" src="./assets/js/signup.js"></script>
+	    <
+
 	</head>
-	<body>
+	<body id="signup">
 		<!-- 1. container 생성 
 			 2. input form 생성 (부트스트랩 활용) 
 			 3. panel 활용 -->
 		<div class="container">
-			<div class="signup-form">
-				<div class="panel panel-default">
-  					<div class="panel-body">
-					<form>
+			<div id="signup-form" class="panel panel-default">
+  				<div class="panel-body">
+					<div id="signup_input_form">
 					  <div class="form-group">
 					    <label for="exampleInputEmail1">Email</label>
 					    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email">
@@ -41,14 +42,31 @@
 					    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
 					  </div>				
 					  <!-- 1단계 펑션형 <button onClick="signup()" type="submit" class="btn btn-success btn-block">Sign up</button>-->
-					  <button id="doSignup" type="submit" class="btn btn-success btn-block">Sign up</button>
+					  <button id="doSignup" class="btn btn-success btn-block">Sign up</button>
 					  <div class="signin">
 					  	<a href="#">sign in</a>
 					  </div>
-					</form>
-					</div> <!-- panel-body -->
-				</div> <!-- panel -->	
-			</div> <!-- signup-form -->
+					</div> <!-- signup_input_form -->
+					
+					  <!-- confirmed form -->
+					  <div id="confirmed_form" class="custom_form">
+					  	<div class="alert alert-success signup_info" role="alert">
+	                        <h3>SignUp 정보 입니다.</h3>
+	                        <p class="email"></p>
+	                        <p class="name"></p>
+	                        <p class="password"></p>
+	                    </div>
+					  </div>
+					 <!-- failed form -->
+					  <div id="failed_form"  class="custom_form">
+	                    <div class="alert alert-danger signup_info" role="alert">
+	                        <h3>Signup 실패 하였습니다.</h3>
+	                    </div>
+                	  </div>
+
+					
+				</div> <!-- panel-body -->
+			</div> <!-- panel -->	
 		</div> <!-- container -->
 	</body>
 	<!-- signup.js 링크, init function 호출 -->

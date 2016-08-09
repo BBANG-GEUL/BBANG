@@ -4,7 +4,9 @@
 	width:500px;
 	margin:15% auto;
 }
-.signup-form{
+#signup-form{
 	width:500px;
 	margin:15% auto;
 }
+
+#confirmed_form, #failed_form{display:none;}
