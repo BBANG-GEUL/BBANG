@@ -16,51 +16,44 @@
 	    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
 	    <script type="text/javascript" src="./assets/js/config.js"></script>
-	    <script type="text/javascript" src="./assets/js/signup.js"></script>
-	    <
+	    <script type="text/javascript" src="./assets/js/signin.js"></script>
+	    
 
 	</head>
-	<body id="signup">
+	<body id="signin">
 		<!-- 1. container 생성 
 			 2. input form 생성 (부트스트랩 활용) 
 			 3. panel 활용 -->
 		<div class="container">
-			<div id="signup-form" class="panel panel-default">
+			<div id="signin-form" class="panel panel-default">
   				<div class="panel-body">
-					<div id="signup_input_form">
+					<div id="signin_input_form">
 					  <div class="form-group">
 					    <label for="exampleInputEmail1">Email</label>
 					    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email">
-					  </div>
-					  <!--임의로 name form 삽입 -->
-					  <div class="form-group">
-					    <label for="exampleInputName1">Name</label>
-					    <input type="address" class="form-control" id="exampleInputName1" placeholder="Name">
 					  </div>
 					  <div class="form-group">
 					    <label for="exampleInputPassword1">Password</label>
 					    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
 					  </div>				
-					  <!-- 1단계 펑션형 <button onClick="signup()" type="submit" class="btn btn-success btn-block">Sign up</button>-->
-					  <button id="doSignup" class="btn btn-success btn-block">Sign up</button>
-					  <div class="signin">
-					  	<a href="./signin.html">sign in</a>
+					  <button id="doSignin" class="btn btn-primary btn-block">Sign in</button>
+					  <div class="signup">
+					  	<a href="./signup.html">sign up</a>
 					  </div>
-					</div> <!-- signup_input_form -->
+					</div> <!-- signin_input_form -->
 					
 					  <!-- confirmed form -->
 					  <div id="confirmed_form" class="custom_form">
-					  	<div class="alert alert-success signup_info" role="alert">
-	                        <h3>SignUp 정보 입니다.</h3>
+					  	<div class="alert alert-success signin_info" role="alert">
+	                        <h3>Signin 정보 입니다.</h3>
 	                        <p class="email"></p>
-	                        <p class="name"></p>
 	                        <p class="password"></p>
 	                    </div>
 					  </div>
 					 <!-- failed form -->
 					  <div id="failed_form"  class="custom_form">
-	                    <div class="alert alert-danger signup_info" role="alert">
-	                        <h3>Signup 실패 하였습니다.</h3>
+	                    <div class="alert alert-danger signin_info" role="alert">
+	                        <h3>Signin 실패 하였습니다.</h3>
 	                    </div>
                 	  </div>
 
@@ -69,6 +62,6 @@
 			</div> <!-- panel -->	
 		</div> <!-- container -->
 	</body>
-	<!-- signup.js 링크, init function 호출 -->
-	<script>$(signup.init)</script>
+	<!-- signin.js 링크, init function 호출 -->
+	<script>$(signin.init)</script>
 </html>
