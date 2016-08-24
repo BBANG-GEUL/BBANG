@@ -10,7 +10,7 @@ var login = {
 	},
 
 	successCallback: function(data){
-		//1. string -> json
+		//1. jason -> string
 		var strData = JSON.stringify(data);
 		//2. base64 hash code
 		var baseObject = btoa(strData);

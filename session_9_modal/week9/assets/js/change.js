@@ -22,17 +22,27 @@ var change ={
 	},
 
 	successCallback: function(data){
-		// 성공시 모달창 닫기 펑션 만들기 
-		//1. string -> json
-		var strData = JSON.stringify(data);
-		console.log(strData);
+		// 1. 성공시 모달창 닫기 펑션 만들기 
+		// response type string 일경우....
+		// 2. refresh .. main 페이지에 변경 사항 적용 
+		var str = jQuery.type(data);
+		if(str="string"){
+			$('#myModal').on('hide', function(e) {
+      			 e.preventDefault();
+   			});
+		
+
+		}
+		else{
+			console.log('2');
+		}	
 		
 		
 	},
 
 	failCallback: function(data){
-		console.log(data);
-	},
+	
+	},	
 
 	setEvent: function(){
 		$('#btn-change').click(change.doChange);
