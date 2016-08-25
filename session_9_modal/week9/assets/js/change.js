@@ -27,14 +27,12 @@ var change ={
 		// 2. refresh .. main 페이지에 변경 사항 적용 
 		var str = jQuery.type(data);
 		if(str="string"){
-			$('#myModal').on('hide', function(e) {
-      			 e.preventDefault();
-   			});
-		
-
+			$(function () {
+   			$('#myModal').modal('toggle');
+   			window.location.reload(true); });
 		}
 		else{
-			console.log('2');
+			console.log("잘못된 정보를 입력하셨습니다.");
 		}	
 		
 		
