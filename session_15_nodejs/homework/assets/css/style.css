@@ -1,0 +1,10 @@
+*{margin:0; padding:0 font-family:'arial'}
+.tr-temp{
+	display:none;
+}
+
+#login #form_login, #form_signup{position:relative; margin:15% auto; width:500px;}
+
+#confirmed_form, #failed_form{display:none;}
+
+#message_box .alert{display:none;}

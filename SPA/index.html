@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="./assets/css/style.css">
+
+    <script   src="https://code.jquery.com/jquery-1.12.4.min.js"   integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="   
+    crossorigin="anonymous"></script>
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+    <script type="text/javascript" src="./assets/js/config.js"></script>
+    <script type="text/javascript" src="./assets/js/login.js"></script>
+    <script type="text/javascript" src="./assets/js/helper.js"></script>
+    
+   
+</head>
+<body id="login">
+    <!-- container -->
+    <div class="continaer">
+        <!--form_login -->
+        
+        <div id="form_login" class="panel panel-default">
+            
+            <div class="panel-body">
+                <div id="login_input_form">
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">Email address</label>
+                        <input type="email" name="email" class="form-control" id="exampleInputEmail1" placeholder="Email">
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputPassword1">Password</label>
+                        <input type="password" name="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                    </div>
+                    <div class="checkbox">
+                        <label>
+                            <input type="checkbox"> Remember
+                        </label>
+
+                        <div class="link pull-right">
+                            <a href="signup.html">Signup</a>
+                        </div>
+                        <div class="clearfix"></div>
+                    </div>
+                    <button id="doLogin" class="btn btn-primary btn-block">Login</button>
+
+                    
+                </div>
+
+                <div id="confirmed_form" class="custom_form">
+                    <div class="alert alert-success login_info" role="alert">
+                        <h3>Login 정보 입니다.</h3>
+                        <p class="name"></p>
+                        <p class="email"></p>
+                        <p class="password"></p>
+                    </div>
+                    <div class="link">
+                        <a href="main.html">다음페이지</a>
+                    </div>
+                </div>
+
+                <div id="failed_form"  class="custom_form">
+                    <div class="alert alert-danger login_info" role="alert">
+                        <h3>Login 실패 하였습니다.</h3>
+                    </div>
+                    <div class="link">
+                        <a href="#">다시 시도하기</a>
+                    </div>
+                </div>
+
+            </div>
+        </div> <!--form_login -->
+    </div>
+    <!-- container -->
+
+    <script>$(login.init);</script>
+    <!--<script>$(index.init);</script>-->
+   
+</body>
+</html>
+

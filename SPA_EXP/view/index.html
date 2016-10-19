@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>NODE JS test</title>
+
+	<script src="http://code.jquery.com/jquery-1.12.4.js" 
+	integrity="sha256-Qw82+bXyGq6MydymqBxNPYTaUXXq7c8v3CwiYwLLNXU=" 
+	crossorigin="anonymous"></script>
+
+	<script src="../js/index.js"></script>
+
+	<!-- 표 맨 위 빈칸 생기는 거 삭제 -->
+	<style type="">
+		.template{display: none;}
+		table tbody tr{
+			cursor: pointer;	
+		}
+
+		table tr td{
+			border: 1px solid;
+		}	
+	</style>
+
+</head>
+<body>
+
+	<div id="sendForm">
+		<input type="text" name="name">
+		<input type="text" name="age">
+		<input type="hidden" name="id">
+		<button id="btn_send_data">Send</button>
+	</div>
+<br><br>
+	<table>
+		<thead>
+			<tr>
+				<td>NAME</td>
+				<td>AGE</td>
+				<td></td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr id="postId" class="template">
+				<td id="name"></td>
+				<td id="age"></td>
+				<td id="del"><a href="/delete/">Delete</a></td>
+			</tr>
+		</tbody>
+	</table>
+<!-- <script>$(index.init)</script> -->
+
+</body>
+
+<script>$(index.init)</script>
+
+</html>
